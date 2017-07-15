@@ -12,6 +12,7 @@ public class Testing{
 	  public void draw(){
 		 
 		 System.out.println("drawawa");
+		 System.out.println("drawawa");
 		 
 	 }
  }
