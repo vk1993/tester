@@ -1,21 +1,26 @@
 package com.org.testing;
-public class Testing{
+public class Testing extends User {
 	
+	@Override
+	void signIn() {
+		System.out.println("user signed in");	
+	}
 	 public static void main(String[] arg)
 	    {
-	        Rectangle re = new Rectangle();
-	        re.draw();
-	    }   
+		 User u = new Testing();
+		 u.signIn();
+		 
+			 Lambda l = ()->{
+				 System.out.println("coool");
+			 };
+			 l.show();
+	    }
 }
-
- class Rectangle implements Drawable{
-	  public void draw(){
-		 
-		 System.out.println("drawawa");
-		 System.out.println("drawawa");
-		 
-	 }
+ abstract class User{
+	 abstract void signIn();
  }
-interface Drawable{  
- void draw();
-} 
+ 
+ 
+ interface Lambda{
+	 public void show();
+ }
