@@ -1,5 +1,5 @@
 package com.org.testing;
-public class Testing extends User {
+public class Testing extends User{
 	
 	@Override
 	void signIn() {
@@ -14,7 +14,10 @@ public class Testing extends User {
 				 System.out.println("coool");
 			 };
 			 l.show();
-	    }
+			 l.print(10);			 
+			 
+	    }	 
+	 
 }
  abstract class User{
 	 abstract void signIn();
@@ -23,4 +26,12 @@ public class Testing extends User {
  
  interface Lambda{
 	 public void show();
+	 default void print(int n){
+		 if(n>0 && n%2==0){
+			 System.out.println("enter number is even"+ n);
+		 }
+		 else{
+			 System.out.println("the number is odd");
+		 }
+	 }
  }
